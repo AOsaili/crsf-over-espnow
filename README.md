@@ -25,7 +25,7 @@ Both boards run a serial command console. Every setting is stored in flash and s
 | ⚠️ Optional | OLED readout and WiFi dashboard on the receiver — diagnostics only, off by default |
 | ❌ Not built | Servo/PWM/SBUS output, failsafe, encryption, binding UI — see [Not implemented](#not-implemented) |
 
-> **The receiver does not drive anything yet.** It decodes and displays channels; it has no failsafe and no servo output. This is a working link and a diagnostic tool, not flight-ready hardware. Do not fly it.
+> **The receiver does not drive anything yet.** It decodes and displays channels; it has no failsafe and no servo output. This is a working link and a diagnostic tool, not control-ready hardware.
 
 ---
 
@@ -252,7 +252,7 @@ A healthy stream is roughly **one frame per 26 bytes**. A much smaller ratio mea
 Listed so nobody assumes otherwise:
 
 - **No servo or PWM output.** The receiver decodes channels but drives no pins.
-- **No SBUS/CRSF output** to a flight controller.
+- **No SBUS/CRSF output**.
 - **No failsafe.** On link loss the receiver holds the last received values indefinitely. `age` and the `NO LINK` indicator report the condition but nothing acts on it.
 - **No encryption.** ESP-NOW peers are unencrypted; anyone on the channel can inject a correctly sized packet.
 - **No binding procedure.** Pairing is manual via the `peer` command.
