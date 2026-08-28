@@ -19,7 +19,6 @@ Both boards run a serial command console. Every setting is stored in flash and s
 |---|---|---|
 | Board | ESP32 (Arduino core 3.x) | ESP32 (Arduino core 3.x) |
 | Connection | JR module bay, **bottom pin** → GPIO 4 | — |
-| Display | none | SSD1306 128×64 I²C, SDA 8 / SCL 9, addr 0x3C |
 
 ### Which pin
 
