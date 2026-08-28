@@ -158,7 +158,10 @@ Both boards: **115200 baud, Newline line ending**. `help` lists everything. Sett
 | `chan <1-13>` | WiFi channel — must match the receiver |
 | `log on\|off\|<ms>` | periodic channel dump, 5–5000 ms |
 | `sbaud <n>` | console baud (reconnect the monitor after) |
-| `mac` `zero` `defaults` `reboot` | |
+| `mac` | print this board's WiFi MAC |
+| `zero` | reset all counters to zero (`in`, `synced`, `rc`, `ping`, `crcFail`, `q`, `ack`) |
+| `defaults` | erase saved settings from flash and reboot |
+| `reboot` | restart immediately, keeping saved settings |
 
 ### Receiver
 
@@ -172,7 +175,9 @@ Both boards: **115200 baud, Newline line ending**. `help` lists everything. Sett
 | `telem off\|<hz>` | telemetry rate back to the transmitter, 1–50 Hz |
 | `log on\|off\|<ms>` | periodic channel dump, 5–5000 ms |
 | `sbaud <n>` | console baud (reconnect the monitor after) |
-| `mac` `defaults` `reboot` | |
+| `mac` | print this board's WiFi MAC — this is the address you give the transmitter's `peer` command |
+| `defaults` | erase saved settings from flash and reboot |
+| `reboot` | restart immediately, keeping saved settings |
 
 `defaults` wipes saved settings and reboots. It is the recovery path whenever a stored setting leaves a board unusable.
 
